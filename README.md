@@ -1,4 +1,4 @@
-# GMApp (Gmail App for Desktop)
+# GmApp (Gmail App for Desktop)
 
 ### **It is not an official application of Google Inc.**
 
