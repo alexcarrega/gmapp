@@ -1,27 +1,27 @@
 {
-	"name": "ws-custom-client",
+	"name": "gmail-app-desktop",
 	"version": "3.0.0",
-	"description": "Whatsapp Custom Client for Linux",
+	"description": "Gmail App for Desktop",
 	"main": "index.js",
 	"scripts": {
 		"start": "electron .",
-		"build-linux64": "electron-packager . wscc --overwrite --asar --platform=linux --arch=x64 --icon=assets/icons/icon.png --prune=true --out=release",
-		"build-linux32": "electron-packager . wscc --overwrite --asar --platform=linux --arch=ia32 --icon=assets/icons/icon.png --prune=true --out=release",
-		"package-linux": "electron-packager . wscc --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release"
+		"build-linux64": "electron-packager . gmapp --overwrite --asar --platform=linux --arch=x64 --icon=assets/icons/icon.png --prune=true --out=release",
+		"build-linux32": "electron-packager . gmapp --overwrite --asar --platform=linux --arch=ia32 --icon=assets/icons/icon.png --prune=true --out=release",
+		"package-linux": "electron-packager . gmapp --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/miccar/wazapp/"
+		"url": "https://github.com/alexcarrega/gmapp/"
 	},
 	"keywords": [
-		"Electron",
-		"WhatsApp",
+		"electron",
+		"gmail",
 		"linux",
 		"debian",
 		"ubuntu",
 		"fedora",
-		"WhatsApp works with Google Chrome 36+",
-		"WhatsApp custom client"
+		"gmail works with google chrome 36+",
+		"gmail app desktop"
 	],
 	"license": "CC0-1.0",
 	"devDependencies": {
@@ -29,7 +29,9 @@
 	},
 	"dependencies": {
 		"electron-notification-shim": "^1.1.0",
+		"electron-open-link-in-browser": "^1.0.2",
 		"electron-packager": "^13.1.1",
-		"electron-settings": "^3.2.0"
+		"electron-settings": "^3.2.0",
+		"electron-windows-badge": "^1.0.5"
 	}
 }
