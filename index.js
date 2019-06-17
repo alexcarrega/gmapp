@@ -4,7 +4,7 @@ const fs = require('fs')
 const electron = require('electron');
 const settings = require('electron-settings');
 const ipc_main = electron.ipcMain;
-const { app, BrowserWindow, Menu, Tray } = require('electron')
+const { app, shell, BrowserWindow, Menu, Tray } = require('electron')
 const path = require('path')
 const got_the_lock = app.requestSingleInstanceLock();
 
@@ -154,6 +154,12 @@ function createWindow() {
 			}
 		}
 	}))
+   
+   gmapp.webContents.on('will-navigate', function(event, url){
+      console.log(event)
+      event.preventDefault();
+      shell.openExternal(url);
+   });
 
 	gmapp.on('close', function (event) {
 	    if(!app.isQuiting && settings.get('close_to_tray')){

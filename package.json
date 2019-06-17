@@ -1,13 +1,13 @@
 {
-	"name": "gmail-app-desktop",
+	"name": "GmApp",
 	"version": "3.0.0",
 	"description": "Gmail App for Desktop",
 	"main": "index.js",
 	"scripts": {
 		"start": "electron .",
-		"build-linux64": "electron-packager . gmapp --overwrite --asar --platform=linux --arch=x64 --icon=assets/icons/icon.png --prune=true --out=release",
-		"build-linux32": "electron-packager . gmapp --overwrite --asar --platform=linux --arch=ia32 --icon=assets/icons/icon.png --prune=true --out=release",
-		"package-linux": "electron-packager . gmapp --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release"
+		"build-linux64": "electron-packager . GmApp --overwrite --asar --platform=linux --arch=x64 --icon=assets/icons/icon.png --prune=true --out=release",
+		"build-linux32": "electron-packager . GmApp --overwrite --asar --platform=linux --arch=ia32 --icon=assets/icons/icon.png --prune=true --out=release",
+		"package-linux": "electron-packager . GmApp --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release"
 	},
 	"repository": {
 		"type": "git",
